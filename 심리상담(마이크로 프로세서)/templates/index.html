@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>감정 분석 상담봇</title>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; text-align: center; margin-top: 80px; }
+        input[type=file], button { margin: 10px; padding: 10px; font-size: 16px; }
+        .error { color: red; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>😊 얼굴 감정 분석 상담봇</h1>
+    <p>얼굴 사진을 업로드하면 감정을 분석하고 상담을 시작합니다.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <br>
+        <button type="submit">분석 시작</button>
+    </form>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+</body>
+</html>

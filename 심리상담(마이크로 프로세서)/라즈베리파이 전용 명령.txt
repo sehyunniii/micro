@@ -1,0 +1,10 @@
+라즈베리파이 설치 명령
+sudo apt update
+sudo apt install python3-opencv python3-pip libatlas-base-dev
+pip install numpy tflite-runtime
+
+실행
+python3 main.py
+
+모델 변환
+python3 convert_to_tflite.py
